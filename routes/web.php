@@ -15,3 +15,4 @@ Route::get('/concat', [ExercisesController::class, 'concat']);
 
 Route::get('/for1', [Exercises2Controller::class, 'for1']);
 Route::get('/for2', [Exercises2Controller::class, 'for2']);
+Route::get('/parImp', [Exercises2Controller::class, 'parImp']);

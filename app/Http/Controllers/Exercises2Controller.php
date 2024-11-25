@@ -21,4 +21,42 @@ class Exercises2Controller extends Controller
             echo $i . " , ";
         }
     }
+
+    //Imprimir todos los valores, los pares, luego los impares hasta N
+    public function parImp()
+    {
+        $n = 20;
+
+        $all = "";
+        $par = "";
+        $imp = "";
+
+        for ($i = 1; $i <= $n; $i++) {
+            $all .= $i . " ";
+            if ($i % 2 == 0) {
+                $par .= $i . " ";
+            } else {
+                $imp .= $i . " ";
+            }
+        }
+
+
+        $text = "N = " . $n;
+        $text = $text .  "<br>";
+        $text = $text .  "<br>";
+        $text = $text . "TODOS LOS NUMEROS:";
+        $text = $text .  "<br>";
+        $text = $text . $all;
+        $text = $text .  "<br>";
+        $text = $text .  "<br>";
+        $text = $text . "NUMEROS PARES:";
+        $text = $text .  "<br>";
+        $text = $text . $par;
+        $text = $text .  "<br>";
+        $text = $text .  "<br>";
+        $text = $text . "NUMEROS IMPARES:";
+        $text = $text .  "<br>";
+        $text = $text . $imp;
+        echo $text;
+    }
 }
